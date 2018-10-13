@@ -28,6 +28,8 @@ function ClearScreen()
     SetDrawOrigin(0.0, 0.0, 0.0, 0) -- nice hack to 'hide' hud elements from other resources/scripts. kinda buggy though.
 end
 
+-- Sometimes the game loads this code correctly, sometimes it doesn't, so let's try to do it anyway because it's much nicer if it actually works like this.
+InitialSetup()
 
 Citizen.CreateThread(function()
     InitialSetup()
