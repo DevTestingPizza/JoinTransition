@@ -85,6 +85,9 @@ Citizen.CreateThread(function()
     
     -- Re-enable the sound in case it was muted.
     ToggleSound(false)
+        
+    -- Fires a Client event that other resources can use just before starting to transition
+    TriggerEvent("JoinTransition:Loading");     
     
     while true do
         ClearScreen()
