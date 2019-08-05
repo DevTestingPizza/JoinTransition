@@ -85,6 +85,9 @@ Citizen.CreateThread(function()
     
     -- Re-enable the sound in case it was muted.
     ToggleSound(false)
+        
+    -- Fires a Client event that other resources can use just before starting to transition
+    TriggerEvent("JoinTransition:Loading");     
     
     while true do
         ClearScreen()
@@ -107,7 +110,7 @@ Citizen.CreateThread(function()
             break
         end
     end
-    
+    TriggerEvent("JoinTransition:FinishLoading");  
     -- Reset the draw origin, just in case (allowing HUD elements to re-appear correctly)
     ClearDrawOrigin()
 end)
