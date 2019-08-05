@@ -110,7 +110,7 @@ Citizen.CreateThread(function()
             break
         end
     end
-    
+    TriggerEvent("JoinTransition:FinishLoading");  
     -- Reset the draw origin, just in case (allowing HUD elements to re-appear correctly)
     ClearDrawOrigin()
 end)
